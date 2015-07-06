@@ -1,0 +1,46 @@
+{
+  "name": "sass-glob-importer",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "description": "Import Sass files from NPM and Bower Modules",
+  "author": "Lucas Motta <mail@lucasmotta.com> (lucasmotta.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucasmotta/sass-glob-importer"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasmotta/sass-glob-importer/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sass",
+    "scss",
+    "importer",
+    "glob",
+    "wildcard",
+    "node-sass"
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel/register",
+    "compile": "babel -d lib/ src/",
+    "pretest": "eslint src/index.js test.js",
+    "preversion": "npm test",
+    "prepublish": "npm test && npm run compile",
+    "postpublish": "git push"
+  },
+  "devDependencies": {
+    "babel-eslint": "^3.1.20",
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5",
+    "node-sass": "^3.2.0"
+  },
+  "dependencies": {
+    "babel": "^5.6.14",
+    "is-glob": "^2.0.0",
+    "map-files": "^0.7.4",
+    "sort-object": "^2.0.2"
+  }
+}
