@@ -1,5 +1,5 @@
-import 'babel/polyfill';
 import path from 'path';
+import Map from 'es6-map';
 import isGlob from 'is-glob';
 import sort from 'sort-object';
 import mapFiles from 'map-files';
@@ -12,7 +12,6 @@ import mapFiles from 'map-files';
 export default function() {
 
   const aliases = new Map();
-
 
   return function(url, parent, done) {
 
